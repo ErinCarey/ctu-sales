@@ -40,6 +40,9 @@ gem 'stripe', '~> 1.26.0', :source =>  'https://code.stripe.com'
 gem 'httparty'
 
 
+group :development do
+  gem 'rails_best_practices'
+end
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
