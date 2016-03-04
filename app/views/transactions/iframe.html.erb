@@ -1,11 +1,3 @@
 <h1><%= @product.name %></h1>
-
-<%= @product.description.html_safe %>
-
-<% if @error %>
-<%= @error %>
-<% end %>
-
 <p>Price: <%= formatted_price(@product.price) %></p>
-
 <%= render 'form', permalink: @product.permalink, sale: @sale, price: formatted_price(@product.price) %>
