@@ -2,6 +2,7 @@ GEM
   remote: https://rubygems.org/
   remote: https://code.stripe.com/
   specs:
+    aasm (4.9.0)
     actionmailer (4.2.1)
       actionpack (= 4.2.1)
       actionview (= 4.2.1)
@@ -233,6 +234,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  aasm
   aws-sdk (< 2.0)
   brakeman
   byebug

@@ -39,6 +39,7 @@ gem 'aws-sdk', '< 2.0'
 gem 'stripe', '~> 1.26.0', :source =>  'https://code.stripe.com'
 gem 'httparty'
 gem 'brakeman'
+gem 'aasm'
 
 
 group :development do
