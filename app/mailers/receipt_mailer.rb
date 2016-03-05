@@ -1,6 +1,7 @@
 class ReceiptMailer < ActionMailer::Base
-  def receipt(sale)
-    @sale = sale
+  def receipt(charge)
+    @charge = charge
+    @sale = Sale.find_by!(stripe_id: @charge.id)
     html = render_to_string('receipt_mailer/receipt.html')
 
     pdf = Docverter::Conversion.run do |c|
