@@ -40,7 +40,7 @@ gem 'stripe', '~> 1.26.0', :source =>  'https://code.stripe.com'
 gem 'httparty'
 gem 'brakeman'
 gem 'aasm'
-
+gem 'paper_trail', '~> 3.0.6'
 
 group :development do
   gem 'rails_best_practices'
