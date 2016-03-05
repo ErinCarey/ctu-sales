@@ -80,6 +80,8 @@ GEM
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
+    docverter (1.0.1)
+      rest-client (~> 1.7)
     domain_name (0.5.20160216)
       unf (>= 0.0.5, < 1.0.0)
     erubis (2.7.0)
@@ -246,6 +248,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
   devise (~> 3.4.1)
+  docverter
   httparty
   jbuilder (~> 2.0)
   jquery-rails

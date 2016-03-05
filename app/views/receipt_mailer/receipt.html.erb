@@ -1,0 +1,17 @@
+<html>
+  <body>
+    <h1>Receipt</h1>
+    <p>
+      You purchased <%= @sale.product.name %> for <%= formatted_price(@sale.amount) %> on <%= @sale.created_at %>.
+    </p>
+    <p>
+      <%= link_to "Click here", pickup_url(guid: @sale.guid) %> to download your purchase.
+    </p>
+    <p>
+      Thank you for your purchase!
+    </p>
+    <p>
+      -- Pete
+    </p>
+  </body>
+</html>
