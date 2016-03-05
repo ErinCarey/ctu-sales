@@ -86,6 +86,7 @@ Rails.application.configure do
     :authentication => :plain,
   }
   config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default_url_options = { :host => "mysterious-dawn-71629.heroku.com" }
 
   config.paperclip_defaults = {
     storage: :s3,
