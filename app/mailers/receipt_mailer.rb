@@ -12,6 +12,6 @@ class ReceiptMailer < ActionMailer::Base
     end
 
     attachments['receipt.pdf'] = pdf
-    mail(to: sale.email_address, subject: 'Receipt for your purchase')
+    mail(to: @sale.email_address, subject: 'Receipt for your purchase')
   end
 end
