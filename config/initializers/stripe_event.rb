@@ -11,7 +11,7 @@ StripeEvent.configure do |events|
 
   events.subscribe 'charge.succeeded' do |event|
     charge = event.data.object
-    StripeMailer.receipt(charge).deliver
+    ReceiptMailer.receipt(charge).deliver
     StripeMailer.admin_charge_succeeded(charge).deliver
   end
 end
