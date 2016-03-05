@@ -1,5 +1,6 @@
 class StripeMailer < ActionMailer::Base
   add_template_helper ApplicationHelper
+
   default from: 'fizz@fastmail.fm'
 
   def admin_dispute_created(charge)
@@ -12,6 +13,7 @@ class StripeMailer < ActionMailer::Base
 
   def admin_charge_succeeded(charge)
     @charge = charge
+    @sale = Sale.find_by(stripe_id: @charge.id)
     mail(to: 'fizz@fastmail.fm', subject: 'Woo! Charge Succeeded!')
   end
 
