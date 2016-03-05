@@ -1,7 +1,7 @@
 class ReceiptMailer < ActionMailer::Base
   add_template_helper ApplicationHelper
 
-  default from: 'fizz@fastmail.fm'
+  default from: 'support@changethatup.com'
 
   def receipt(charge)
     @charge = charge
