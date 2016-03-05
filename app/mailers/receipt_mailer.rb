@@ -1,4 +1,5 @@
 class ReceiptMailer < ActionMailer::Base
+  add_template_helper ApplicationHelper
   def receipt(charge)
     @charge = charge
     @sale = Sale.find_by!(stripe_id: @charge.id)

@@ -1,4 +1,5 @@
 class StripeMailer < ActionMailer::Base
+  add_template_helper ApplicationHelper
   default from: 'fizz@fastmail.fm'
 
   def admin_dispute_created(charge)
