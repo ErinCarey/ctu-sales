@@ -80,7 +80,7 @@
       $.get("/status/" + guid, function(data) {
         if (data.status === "finished") {
           window.location = "/pickup/" + guid;
-        } else if (data.status === "error") {
+        } else if (data.status === "errored") {
           showError(data.error)
         } else {
           setTimeout(function() { poll(guid, num_retries_left - 1) }, 500);
