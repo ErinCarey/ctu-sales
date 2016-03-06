@@ -31,15 +31,16 @@
         <button type="submit" class="btn btn-primary btn-large">Buy Now</button>
       </div>
     </div>
+    <div class='row'>
+      <div id="payment-errors" class="alert payment-alert" style="<%= sale.errors.any? ? '' : 'display: none;' %> margin-bottom: 0px;">
+        <% sale.errors.full_messages.each do |msg| %>
+          <span><%= msg %></span>
+        <% end %>
+      </div>
+    </div>
   <% end %>
 </div>
-<div class='well'>
-  <div id="payment-errors" class="alert payment-alert" style="<%= sale.errors.any? ? '' : 'display: none;' %> margin-bottom: 0px;">
-    <% sale.errors.full_messages.each do |msg| %>
-      <span><%= msg %></span>
-    <% end %>
-  </div>
-</div>
+
 
 <script type="text/javascript" src="https://js.stripe.com/v2/"></script>
 
