@@ -1,0 +1,393 @@
+/* CSS Document */
+@media (min-width: 320px) and (max-width: 500px) {
+.contentwrap{	
+	margin:0 auto;
+	width:95%;	
+}
+.rgtimg, .lftimg{	
+	display:none;
+}
+.img-mob{
+	display:block;
+	margin:0 auto 20px auto;
+	max-width:100%;
+}
+.img6{	
+	margin:13px 20px 0 0;
+}
+.downarrow2{
+	display:none;	
+}
+.txt9{
+	width:100%;
+}
+.popular-arrow{
+	display:none;
+}
+/*============== start checkout page ============== */
+.chk-logo{
+	margin:0 auto;
+	display:block;	
+}
+.chk-rgt-arrow{
+	margin:2% auto;
+	display:block;	
+}
+.chk-lftimg{
+	float:left;	
+	margin:4% 2% 0 0;	
+}
+.chk-lftimg3{	
+	display:none;	
+}
+.frm-top{
+	height:auto;	
+}
+.chkfrmtop-320{
+	display:block;
+	margin:0 auto;
+	width:100%;
+	border-radius:10px 10px 0 0;
+}
+.frmtop-txt, .frmtop-txt2{
+	display:none;
+}
+.chkfrm{	
+	width:100%;
+	margin:30px auto;
+	display:table;
+	float:none;
+}
+.popular-arrow{
+	display:none;
+}
+.title1, .title2, .title3{	
+	font-size:16px;	
+	line-height:30px;	
+}
+.link-container-1, .link-container-5, .link-container-3, .link-container-2,
+.link-container-1 a, .link-container-3 a, .link-container-5 a,
+.link-container-1 a:hover, .link-container-3 a:hover, .link-container-5 a:hover,
+.link-container-1 a.picked, .link-container-3 a.picked, .link-container-5 a.picked
+{
+	height:auto;
+}
+/*============== end checkout page ============== */
+/* ================ start upsell page ============== */
+.upbox{
+	width:auto;		
+}
+.up-text{
+	padding:3% 0 0 0;
+}
+/* ================ end upsell page ================ */
+/*========================= START CONFIRMATION PAGE ======================== */
+ul.conflist{
+	background:none;
+	padding:0 0 10px 0;
+}
+.txtbreak{
+	display:none;
+}
+/*========================= END CONFIRMATION PAGE ======================== */
+}
+/*@media (max-width: 767px) {*/
+@media (min-width: 500px) and (max-width: 767px) {
+.contentwrap{	
+	margin:0 auto;
+	width:95%;	
+}
+.img6{	
+	margin:13px 20px 0 0;
+}
+.img-mob{
+	display:none;	
+}
+.downarrow2{
+	display:none;
+}
+.txt9{
+	width:100%;
+}
+.popular-arrow{
+	display:none;
+	padding:0 0 10px 0;
+}
+/*============== start checkout page ============== */
+.chk-logo{
+	margin:0 auto;
+	display:block;	
+}
+.chk-rgt-arrow{
+	margin:2% auto;
+	display:block;	
+}
+.chk-lftimg{
+	float:left;	
+	margin:4% 2% 0 0;	
+}
+.chk-lftimg3{	
+	display:none;	
+}
+.frm-top{
+	height:150px;	
+}
+.chkfrmtop-320{
+	display:none;	
+}
+.frmtop-txt{
+	font-size:42px;
+	line-height:36px;
+	padding:3% 0 0 0;	
+}
+.frmtop-txt span{
+	font-size:30px;
+}
+.frmtop-txt2{
+	font-size:18px;
+	line-height:20px;
+	padding:3% 0 0 0;
+}
+.chkfrm{	
+	width:480px;
+	margin:30px auto;
+	display:table;
+	float:none;
+}
+.popular-arrow{
+	display:none;
+}
+.title1, .title2, .title3{	
+	font-size:16px;	
+	line-height:30px;	
+}
+.link-container-1, .link-container-5, .link-container-3, .link-container-2,
+.link-container-1 a, .link-container-3 a, .link-container-5 a,
+.link-container-1 a:hover, .link-container-3 a:hover, .link-container-5 a:hover,
+.link-container-1 a.picked, .link-container-3 a.picked, .link-container-5 a.picked
+{
+	height:auto;
+}
+/*============== end checkout page ============== */
+/* ================ start upsell page ============== */
+.upbox{
+	width:90%;		
+}
+.up-text{
+	padding:3% 0 0 0;
+}
+/* ================ end upsell page ================ */
+/*========================= START CONFIRMATION PAGE ======================== */
+ul.conflist{
+	background:none;
+	padding:0 0 10px 0;
+}
+.txtbreak{
+	display:block;
+}
+/*========================= END CONFIRMATION PAGE ======================== */
+}
+@media (min-width: 768px) and (max-width: 991px) {
+.contentwrap{	
+	margin:0 38px;
+}
+.txt3{	
+	width:86%;	
+}
+.img1{
+	margin:0 auto 20px auto;
+}
+.img6{	
+	margin:13px 20px 0 0;
+}
+.txt6{
+	width:400px;
+}
+.img-mob{
+	display:none;	
+}
+.downarrow2{
+	display:none;	
+}
+.txt9{
+	width:100%;
+}
+.popular-arrow{
+	display:none;
+}
+/*============== start checkout page ============== */
+.chk-logo{
+	margin:0 0 3% -15px;
+	float:left;	
+}
+.chk-rgt-arrow{
+	float:right;
+	margin:6% -15px 0 0;	
+}
+.chk-lftimg{
+	float:left;	
+	margin:4% 2% 0 0;	
+}
+.chk-lftimg3{	
+	margin:-15% 0 20px 0;	
+}
+.frm-top{
+	height:100px;	
+}
+.chkfrmtop-320{
+	display:none;	
+}
+.frmtop-txt{
+	font-size:30px;
+	line-height:25px;
+	padding:2.5% 0 0 0;	
+}
+.frmtop-txt span{
+	font-size:25px;
+}
+.frmtop-txt2{
+	font-size:17px;
+	line-height:19px;
+	padding:2% 0 0 0;
+}
+.chkfrm{	
+	padding-left:5px;
+	padding-right:10px;	
+}
+.popular-arrow{
+	display:none;
+}
+.title1, .title2, .title3{	
+	font-size:16px;	
+	line-height:30px;	
+}
+.link-container-1, .link-container-5, .link-container-3, .link-container-2,
+.link-container-1 a, .link-container-3 a, .link-container-5 a,
+.link-container-1 a:hover, .link-container-3 a:hover, .link-container-5 a:hover,
+.link-container-1 a.picked, .link-container-3 a.picked, .link-container-5 a.picked
+{
+	height:244px;
+}
+/*============== end checkout page ============== */
+/* ================ start upsell page ============== */
+.upbox{
+	width:74.58%;		
+}
+.up-text{
+	padding:3% 4% 0 4%;
+}
+/* ================ end upsell page ================ */
+/*========================= START CONFIRMATION PAGE ======================== */
+ul.conflist{
+	background:url(../images/conlistbg.jpg) left top repeat-y;
+	height:214px;
+	padding:0 0 10px 50px;
+}
+.txtbreak{
+	display:block;
+}
+/*========================= END CONFIRMATION PAGE ======================== */
+}
+@media (min-width: 992px) {
+.contentwrap{	
+	margin:0 38px;
+}
+.txt3{	
+	width:67%;	
+}
+.img1{
+	margin:20px 0 0 0;
+}
+.padding-rgt{
+	padding-right:0;
+}
+padding-lft{
+	padding-left:0;
+}
+.img6{	
+	margin:0 20px 0 0;
+}
+.txt6{
+	width:400px;
+}
+.img-mob{
+	display:none;	
+}
+.downarrow2{
+	display:block;
+	left:20px;
+	top:140px;
+}
+.txt9{
+	width:80%;
+}
+/*============== start checkout page ============== */
+.chk-logo{
+	margin:0 0 3% -15px;
+	float:left;	
+}
+.chk-rgt-arrow{
+	float:right;
+	margin:6% -15px 0 0;	
+}
+.chk-lftimg{
+	float:left;	
+	margin:4% 2% 0 0;	
+}
+.chk-lftimg3{	
+	margin:-19% 0 20px 0;	
+}
+.frm-top{
+	height:130px;	
+}
+.chkfrmtop-320{
+	display:none;	
+}
+.frmtop-txt{
+	font-size:37px;
+	line-height:30px;
+	padding:4% 0 0 0;	
+}
+.frmtop-txt span{
+	font-size:30px;
+}
+.frmtop-txt2{
+	font-size:20px;
+	line-height:24px;
+	padding:2% 0 0 0;
+}
+.chkfrm{	
+	padding-left:5px;
+	padding-right:10px;	
+}
+.popular-arrow{
+	display:block;
+}
+.title1, .title2, .title3{	
+	font-size:18px;	
+	line-height:30px;	
+}
+.link-container-1, .link-container-5, .link-container-3, .link-container-2,
+.link-container-1 a, .link-container-3 a, .link-container-5 a,
+.link-container-1 a:hover, .link-container-3 a:hover, .link-container-5 a:hover,
+.link-container-1 a.picked, .link-container-3 a.picked, .link-container-5 a.picked
+{
+	height:244px;
+}
+/*============== end checkout page ============== */
+/* ================ start upsell page ============== */
+.upbox{
+	width:64.58%;		
+}
+.up-text{
+	padding:3% 4% 0 4%;
+}
+/* ================ end upsell page ================ */
+/*========================= START CONFIRMATION PAGE ======================== */
+ul.conflist{
+	background:url(../images/conlistbg.jpg) left top no-repeat;
+	padding:0 0 10px 50px;
+	height:200px;
+}
+/*========================= END CONFIRMATION PAGE ======================== */
+}
