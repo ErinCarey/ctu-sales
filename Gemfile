@@ -43,6 +43,7 @@ gem 'aasm'
 gem 'paper_trail', '~> 3.0.6'
 gem 'stripe_event'
 gem 'docverter'
+gem 'sidekiq'
 
 group :development do
   gem 'rails_best_practices'

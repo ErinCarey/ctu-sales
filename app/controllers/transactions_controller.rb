@@ -2,6 +2,41 @@ class TransactionsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:new, :create, :iframe]
   before_filter :strip_iframe_protection
 
+  def create
+    @product = Product.find_by!(
+      permalink: params[:permalink]
+    )
+
+    token = params[:stripeToken]
+
+    # sale = Sale.new do |s|
+      # s.amount = @product.price,
+      # s.product_id = @product.id,
+      # s.stripe_token = token,
+      # s.email = params[:email]
+    # end
+    sale = @product.sales.create(
+      amount:       @product.price,
+      email:        params[:email],
+      stripe_token: params[:stripeToken]
+    )
+
+    if sale.save
+      StripeCharger.perform_async(sale.guid)
+      render json: { guid: sale.guid }
+    else
+      errors = sale.errors.full_messages
+      render json: {
+        error: errors.join(" ")
+      }, status: 400
+    end
+  end
+
+  def status
+    sale = Sale.find_by!(guid: params[:guid])
+
+    render json: { status: sale.state }
+  end
 
   def new
     @product = Product.find_by!(permalink: params[:permalink])
@@ -12,24 +47,24 @@ class TransactionsController < ApplicationController
     @product = @sale.product
   end
 
-  def create
-    @product = Product.find_by!(
-      permalink: params[:permalink]
-    )
-
-    sale = @product.sales.create(
-      amount:       @product.price,
-      email:        params[:email],
-      stripe_token: params[:stripeToken]
-    )
-    sale.process!
-    if sale.finished?
-      redirect_to pickup_url(guid: sale.guid)
-    else
-      flash.now[:alert] = sale.error
-      render :new
-    end
-  end
+  # def create
+  #   @product = Product.find_by!(
+  #     permalink: params[:permalink]
+  #   )
+  #
+  #   sale = @product.sales.create(
+  #     amount:       @product.price,
+  #     email:        params[:email],
+  #     stripe_token: params[:stripeToken]
+  #   )
+  #   sale.process!
+  #   if sale.finished?
+  #     redirect_to pickup_url(guid: sale.guid)
+  #   else
+  #     flash.now[:alert] = sale.error
+  #     render :new
+  #   end
+  # end
 
   def download
     @sale = Sale.find_by!(guid: params[:guid])
