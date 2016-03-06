@@ -44,6 +44,7 @@ gem 'paper_trail', '~> 3.0.6'
 gem 'stripe_event'
 gem 'docverter'
 gem 'sidekiq'
+gem 'puma'
 
 group :development do
   gem 'rails_best_practices'
