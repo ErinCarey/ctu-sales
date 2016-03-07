@@ -28,6 +28,12 @@
   font-size: 1.5em;
   font-weight: bold;
   margin-top: 10px;
+  color: white;
+}
+
+.lock{
+	margin:5% auto;
+	display:block;
 }
 
 form {
