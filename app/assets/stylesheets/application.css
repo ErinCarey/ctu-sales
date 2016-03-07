@@ -177,7 +177,9 @@ body {
   margin-right: auto;
   padding-bottom: 0px !important;
   background-color: #4d129f !important;
-  border: 0;
+  border: 0 !important;
+  box-shadow:initial  !important;
+  border-radius: 0 !important;
 }
 
 .payment-well .row {
