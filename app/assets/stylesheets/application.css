@@ -31,7 +31,7 @@
 }
 
 form {
-  font-family: 'Droid Sans', helvetica, arial, sans-serif;  
+  font-family: 'Droid Sans', helvetica, arial, sans-serif;
 }
 
 form input {
@@ -167,20 +167,21 @@ blockquote {
 }
 
 .payment-well {
-  width: 300px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 0px !important;
+  background: #4d129f;
 }
 
 .payment-well .row {
-  width: 280;
+  /* width: 280; */
   margin-left: auto;
   margin-right: auto;
 }
 
 .payment-well .payment-input {
-  width: 280px;
+  /* width: 280px; */
 }
 
 .payment-quote {
