@@ -29,16 +29,14 @@
         <!-- <small style="font-size:0.65em">90 Day Money-Back Guarantee</small> -->
       </div>
     </div>
-  </div>
-  <div class="payment-well" style="margin-top: 0px; margin-bottom: 0px;">
     <div class="row">
-      <div id="powered-by-stripe" style="<%= sale.errors.any? ? 'display: none;' : '' %> margin-left: auto; margin-right: auto; text-align: center; margin-top: 15px;margin-bottom: 15px;">
-        <img src="<%= asset_path('powered_by_stripe.png') %>" width="119" height="26">
-      </div>
-      <div id="payment-errors" class="alert payment-alert" style="<%= sale.errors.any? ? '' : 'display: none;' %> margin-bottom: 0px;">
+      <div id="payment-errors" class="alert payment-alert" style="<%= sale.errors.any? ? '' : 'display: none;' %> margin-bottom: 0px;margin-top: 1em;">
         <% sale.errors.full_messages.each do |msg| %>
           <span><%= msg %></span>
         <% end %>
+      </div>
+      <div id="powered-by-stripe" style="<%= sale.errors.any? ? 'display: none;' : '' %> margin-left: auto; margin-right: auto; text-align: center;">
+        <img src="<%= asset_path('powered_by_stripe.png') %>" width="119" height="26">
       </div>
     </div>
   </div>
