@@ -43,6 +43,18 @@ class Sale < ActiveRecord::Base
         currency: "usd",
         source: self.stripe_token,
         description: self.email,
+        shipping: {
+          address: {
+            line1: self.line1,
+            line2: self.line2,
+            city: self.city,
+            state: self.region,
+            postal_code: self.postal_code,
+            country: self.country,
+          },
+          name: self.name,
+          phone: self.phone,
+        },
       )
       balance = Stripe::BalanceTransaction.retrieve(charge.balance_transaction)
       self.update(
