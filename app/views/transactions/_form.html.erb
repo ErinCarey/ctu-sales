@@ -22,7 +22,7 @@
       </div>
     </div>
     <div class="row" style="margin-top: 20px">
-      <!-- <div class="price" style="margin-top: 20px; float: left"><%= price %></div> -->
+      <div class="price" style="margin-top: 20px; float: left"><%= price %></div>
       <div style="float: right; margin-right: 8px;text-align:center">
         <div class="btn btn-success btn-large" disabled="disabled" style="display: none; width: 70px; height: 20px;" id="spinner-button"><img src="<%= asset_path('green_spinner_2.gif') %>" style="height: 15px;"></div>
         <button type="submit" class="btn btn-success btn-large" id="pay-button">Pay Now</button><br>
@@ -30,12 +30,12 @@
       </div>
     </div>
     <div class="row">
-      <div id="payment-errors" class="alert payment-alert" style="<%= sale.errors.any? ? '' : 'display: none;' %> margin-bottom: 0px;margin-top: 1em;">
+      <div id="payment-errors" class="alert payment-alert" style="<%= sale.errors.any? ? '' : 'display: none;' %> margin-bottom: 1em;margin-top: 1em;">
         <% sale.errors.full_messages.each do |msg| %>
           <span><%= msg %></span>
         <% end %>
       </div>
-      <div id="powered-by-stripe" style="<%= sale.errors.any? ? 'display: none;' : '' %> margin-left: auto; margin-right: auto; text-align: center;">
+      <div id="powered-by-stripe" style="<%= sale.errors.any? ? 'display: none;' : '' %> margin-left: auto; margin-right: auto; text-align: center;margin-bottom:1em;">
         <img src="<%= asset_path('powered_by_stripe.png') %>" width="119" height="26">
       </div>
     </div>
