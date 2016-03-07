@@ -166,6 +166,10 @@ blockquote {
   height: 34px;
 }
 
+body {
+  padding-left: 0 !important;
+}
+
 .payment-well {
   width: 100%;
   margin-left: auto;

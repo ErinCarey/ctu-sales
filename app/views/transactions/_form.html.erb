@@ -1,5 +1,5 @@
 <%= form_tag buy_path(permalink: permalink), :class => '', :id => 'payment-form' do %>
-  <div class="well payment-well" style="margin-bottom: 0px;">
+  <div class="well payment-well">
     <div class="row">
       <label class="control-label" for="email">Email Address <span class="label pull-right" style="margin-right: 8px">Secure <img src="<%= asset_path('lock.png') %>" style="height: 13px"></span></label>
       <input autofocus="true" type="email" name="email" id="email" placeholder="you@example.com" class="payment-input"/>
