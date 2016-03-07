@@ -172,13 +172,13 @@ body {
 }
 
 .payment-well {
-  width: 100%;
+  width: 343px;
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 0px !important;
   background-color: #4d129f !important;
   border: 0 !important;
-  box-shadow:initial  !important;
+  box-shadow: initial !important;
   border-radius: 0 !important;
 }
 
