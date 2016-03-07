@@ -168,6 +168,7 @@ blockquote {
 
 body {
   padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
 .payment-well {
@@ -197,7 +198,9 @@ body {
   line-height:24px;
   padding-left:5px;
 }
-
+.payment-well .control-label {
+  color: white !important;
+}
 .payment-quote {
   font-family: 'Droid Sans', helvetica, arial, sans-serif;
   font-size: 0.8em;
