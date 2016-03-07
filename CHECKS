@@ -1,0 +1,5 @@
+WAIT=6
+ATTEMPTS=30
+TIMEOUT=2
+# is WordPress working?
+//transform.changethatup.com/ CTU Transform
