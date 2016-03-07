@@ -9,16 +9,17 @@ class TransactionsController < ApplicationController
 
     token = params[:stripeToken]
 
-    # sale = Sale.new do |s|
-      # s.amount = @product.price,
-      # s.product_id = @product.id,
-      # s.stripe_token = token,
-      # s.email = params[:email]
-    # end
     sale = @product.sales.create(
       amount:       @product.price,
       email:        params[:email],
-      stripe_token: params[:stripeToken]
+      name:  params['name'],
+      phone:  params['phone'],
+      line1:  params['line1'],
+      line2:  params['line2'],
+      city:  params['city'],
+      region:  params['state'],
+      postal_code:  params['postal_code'],
+      country:  'US',
     )
 
     if sale.save
