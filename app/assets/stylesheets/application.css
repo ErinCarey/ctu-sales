@@ -176,7 +176,16 @@ body {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
-
+.formtop{
+	width:100%;
+	position:relative;
+}
+.formmid{
+	height:auto;
+	width:100%;
+	padding:0 0 0 0;
+	display:table;
+}
 .payment-well {
   width: 343px;
   margin-left: auto;

@@ -1,48 +1,76 @@
 <%= form_tag buy_path(permalink: permalink), :class => '', :id => 'payment-form' do %>
-  <div class="frm-hding2">
-    <p class="hding-txt">Enter Your Payment information</p>
-    <img src="/images/hding-arrow.png" alt="" class="hding-arrow2">
+  <div class="formtop">
+    <div class="frmElmnts2 clearfix" style="margin-top:25px;">
+      <input type="text" placeholder="First Name" name='fname'>
+    </div>
+    <div class="frmElmnts2 clearfix">
+      <input type="text" placeholder="Last Name" name='lname'>
+    </div>
+    <div class="frmElmnts2 clearfix">
+      <input type="text" placeholder="Street Address" name='line1'>
+    </div>
+    <div class="frmElmnts2 clearfix">
+      <input type="text" placeholder="Street Address" name='line1'>
+    </div>
+    <div class="frmElmnts2 clearfix">
+      <input type="text" placeholder="City" name='city'>
+    </div>
+    <div class="frmElmnts2 clearfix">
+      <input type="text" placeholder="State" name='region'>
+    </div>
+    <div class="frmElmnts2 clearfix">
+      <input type="text" placeholder="ZIP Code" name='zip_code'>
+    </div>
+    <div class="frmElmnts2 clearfix">
+      <input type="text" placeholder="Phone" name='phone'>
+    </div>
   </div>
-  <div class="well payment-well">
-    <div class="row">
-      <label class="control-label" for="email">Email Address <span class="label pull-right" style="margin-right: 8px">Secure <img src="<%= asset_path('lock.png') %>" style="height: 13px"></span></label>
-      <input autofocus="true" type="email" name="email" id="email" placeholder="you@example.com" class="payment-input"/>
+  <div class="formmid">
+    <div class="frm-hding2">
+      <p class="hding-txt">Enter Your Payment information</p>
+      <img src="/images/hding-arrow.png" alt="" class="hding-arrow2">
     </div>
-    <div class="row">
-      <label class="control-label" for="number">Card Number <span class="pull-right" style="margin-right: 8px"><img src="<%= asset_path('visa.png') %>" style="height: 15px;"><img src="<%= asset_path('mastercard.png') %>" style="height: 15px;"><img src="<%= asset_path('amex.png') %>" style="height: 15px;"><img src="<%= asset_path('discover.png') %>" style="height: 15px;"></span></label>
-      <input type="text" size="20" data-stripe="number" id="number" placeholder="1234 5678 9012 3456" pattern="[\d ]*" class="payment-input"/>
-    </div>
-    <div class="row">
-      <div style="float: left">
-        <label class="control-label" for="cvc">CV Code</label>
-        <input type="text" style="width: 3em" size="3" data-stripe="cvc" id="cvc" placeholder="123" pattern="\d*"/>
-        <img id="card-image" src="<%= asset_path('credit.png') %>" style="height: 30px; padding-left: 10px; margin-top: -10px">
+    <div class="well payment-well">
+      <div class="row">
+        <label class="control-label" for="email">Email Address <span class="label pull-right" style="margin-right: 8px">Secure <img src="<%= asset_path('lock.png') %>" style="height: 13px"></span></label>
+        <input autofocus="true" type="email" name="email" id="email" placeholder="you@example.com" class="payment-input"/>
       </div>
-      <div style="float: right; margin-right: 8px">
-        <label class="control-label">Expiry Date</label>
-        <input style="width: 2em" type="text" size="2" id="exp-month" data-stripe="exp-month" placeholder="MM" pattern="\d*"/>
-        <span> / </span>
-        <input style="width: 3em" type="text" size="4" id="exp-year" data-stripe="exp-year" placeholder="YYYY" pattern="\d*"/>
+      <div class="row">
+        <label class="control-label" for="number">Card Number <span class="pull-right" style="margin-right: 8px"><img src="<%= asset_path('visa.png') %>" style="height: 15px;"><img src="<%= asset_path('mastercard.png') %>" style="height: 15px;"><img src="<%= asset_path('amex.png') %>" style="height: 15px;"><img src="<%= asset_path('discover.png') %>" style="height: 15px;"></span></label>
+        <input type="text" size="20" data-stripe="number" id="number" placeholder="1234 5678 9012 3456" pattern="[\d ]*" class="payment-input"/>
       </div>
-    </div>
-    <div class="row" style="margin-top: 20px">
-      <div class="price" style="margin-top: 20px; float: left"><%= price %></div>
-      <div style="float: right; margin-right: 8px;text-align:center">
-        <div class="btn btn-success btn-large" disabled="disabled" style="display: none; width: 70px; height: 20px;" id="spinner-button"><img src="<%= asset_path('green_spinner_2.gif') %>" style="height: 15px;"></div>
-        <button type="submit" class="btn btn-success btn-large" id="pay-button">Pay Now</button><br>
-        <!-- <small style="font-size:0.65em">90 Day Money-Back Guarantee</small> -->
+      <div class="row">
+        <div style="float: left">
+          <label class="control-label" for="cvc">CV Code</label>
+          <input type="text" style="width: 3em" size="3" data-stripe="cvc" id="cvc" placeholder="123" pattern="\d*"/>
+          <img id="card-image" src="<%= asset_path('credit.png') %>" style="height: 30px; padding-left: 10px; margin-top: -10px">
+        </div>
+        <div style="float: right; margin-right: 8px">
+          <label class="control-label">Expiry Date</label>
+          <input style="width: 2em" type="text" size="2" id="exp-month" data-stripe="exp-month" placeholder="MM" pattern="\d*"/>
+          <span> / </span>
+          <input style="width: 3em" type="text" size="4" id="exp-year" data-stripe="exp-year" placeholder="YYYY" pattern="\d*"/>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div id="payment-errors" class="alert payment-alert" style="<%= sale.errors.any? ? '' : 'display: none;' %> margin-bottom: 1em;margin-top: 1em;">
-        <% sale.errors.full_messages.each do |msg| %>
-          <span><%= msg %></span>
-        <% end %>
+      <div class="row" style="margin-top: 20px">
+        <div class="price" style="margin-top: 20px; float: left"><%= price %></div>
+        <div style="float: right; margin-right: 8px;text-align:center">
+          <div class="btn btn-success btn-large" disabled="disabled" style="display: none; width: 70px; height: 20px;" id="spinner-button"><img src="<%= asset_path('green_spinner_2.gif') %>" style="height: 15px;"></div>
+          <button type="submit" class="btn btn-success btn-large" id="pay-button">Pay Now</button><br>
+          <!-- <small style="font-size:0.65em">90 Day Money-Back Guarantee</small> -->
+        </div>
       </div>
-      <div id="powered-by-stripe" style="<%= sale.errors.any? ? 'display: none;' : '' %> margin-left: auto; margin-right: auto; text-align: center;margin-bottom:1em;">
-        <img src="<%= asset_path('powered_by_stripe.png') %>" width="119" height="26">
+      <div class="row">
+        <div id="payment-errors" class="alert payment-alert" style="<%= sale.errors.any? ? '' : 'display: none;' %> margin-bottom: 1em;margin-top: 1em;">
+          <% sale.errors.full_messages.each do |msg| %>
+            <span><%= msg %></span>
+          <% end %>
+        </div>
+        <div id="powered-by-stripe" style="<%= sale.errors.any? ? 'display: none;' : '' %> margin-left: auto; margin-right: auto; text-align: center;margin-bottom:1em;">
+          <img src="<%= asset_path('powered_by_stripe.png') %>" width="119" height="26">
+        </div>
+        <div class="formbtm"><img src="/images/lock.png" alt="" class="lock"></div>
       </div>
-      <div class="formbtm"><img src="/images/lock.png" alt="" class="lock"></div>
     </div>
   </div>
 <% end %>
