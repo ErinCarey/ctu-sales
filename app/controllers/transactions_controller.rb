@@ -10,6 +10,7 @@ class TransactionsController < ApplicationController
     token = params[:stripeToken]
 
     sale = @product.sales.create(
+      stripe_token: params[:stripeToken],
       amount: @product.price,
       email: params[:email],
       name: params[:fname] + " " + params[:lname],
