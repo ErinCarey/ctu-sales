@@ -1,4 +1,8 @@
 <%= form_tag buy_path(permalink: permalink), :class => '', :id => 'payment-form' do %>
+  <div class="frm-hding2">
+    <p class="hding-txt">Enter Your Payment information</p>
+    <img src="images/hding-arrow.png" alt="" class="hding-arrow2">
+  </div>
   <div class="well payment-well">
     <div class="row">
       <label class="control-label" for="email">Email Address <span class="label pull-right" style="margin-right: 8px">Secure <img src="<%= asset_path('lock.png') %>" style="height: 13px"></span></label>

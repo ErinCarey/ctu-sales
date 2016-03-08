@@ -10,15 +10,15 @@ class TransactionsController < ApplicationController
     token = params[:stripeToken]
 
     sale = @product.sales.create(
-      amount:       @product.price,
-      email:        params[:email],
-      name:  params['name'],
-      phone:  params['phone'],
-      line1:  params['line1'],
-      line2:  params['line2'],
-      city:  params['city'],
-      region:  params['state'],
-      postal_code:  params['postal_code'],
+      amount: @product.price,
+      email: params[:email],
+      name: params[:name],
+      phone: params[:phone],
+      line1: params[:line1],
+      line2: params[:line2],
+      city: params[:city],
+      region: params[:state],
+      postal_code: params[:postal_code],
       country:  'US',
     )
 

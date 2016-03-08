@@ -2,7 +2,6 @@ class Sale < ActiveRecord::Base
   has_paper_trail
   include AASM
 
-
   aasm column: 'state' do
     state :pending, initial: true
     state :processing
