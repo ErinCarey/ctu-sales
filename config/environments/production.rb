@@ -82,11 +82,11 @@ Rails.application.configure do
     :address        => ENV['MAILGUN_SMTP_SERVER'],
     :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
     :password       => ENV['MAILGUN_SMTP_PASSWORD'],
-    :domain         => 'mysterious-dawn-71629.heroku.com',
+    :domain         => 'transform.changethatup.com',
     :authentication => :plain,
   }
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.default_url_options = { :host => "mysterious-dawn-71629.heroku.com" }
+  config.action_mailer.default_url_options = { :host => "transform.changethatup.com" }
 
   config.paperclip_defaults = {
     storage: :s3,
