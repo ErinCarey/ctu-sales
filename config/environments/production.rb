@@ -78,6 +78,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   config.action_mailer.delivery_method = :mailgunner
+  config.action_mailer.default_url_options = { :host => "changethatup.com" }
 
   config.paperclip_defaults = {
     storage: :s3,
