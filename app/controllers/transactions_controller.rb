@@ -12,7 +12,7 @@ class TransactionsController < ApplicationController
     sale = @product.sales.create(
       amount: @product.price,
       email: params[:email],
-      name: params[:name],
+      name: params[:fname] + " " + params[:lname],
       phone: params[:phone],
       line1: params[:line1],
       line2: params[:line2],
