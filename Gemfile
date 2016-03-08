@@ -45,6 +45,7 @@ gem 'stripe_event'
 gem 'docverter'
 gem 'sidekiq'
 gem 'puma'
+gem 'mailgunner'
 
 group :development do
   gem 'rails_best_practices'
