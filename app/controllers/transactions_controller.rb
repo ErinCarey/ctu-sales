@@ -64,7 +64,9 @@ class TransactionsController < ApplicationController
   end
 
   def upsell
+    @product = Product.find_by!(permalink: 'transform-x6')
     @sale = Sale.find_by!(guid: params[:guid])
+
   end
 
   private
