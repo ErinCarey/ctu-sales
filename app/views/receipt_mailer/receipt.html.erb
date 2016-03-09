@@ -1,17 +1,171 @@
-<html>
-  <body>
-    <h1>Receipt</h1>
-    <p>
-      You purchased <%= @sale.product.name %> for <%= formatted_price(@sale.amount) %> on <%= @sale.created_at %>.
-    </p>
-    <p>
-      <%= link_to "Click here", pickup_url(guid: @sale.guid) %> to download your purchase.
-    </p>
-    <p>
-      Thank you for your purchase!
-    </p>
-    <p>
-      -- Pete
-    </p>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CTU Transform</title>
+    <!-- Bootstrap -->
+	 <link href="/css/bootstrap.css" rel="stylesheet">
+     <link href="/css/common.css" rel="stylesheet">
+	 <link href="/css/media.css" rel="stylesheet">
+     <link href="/css/font.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+ </head>
+<body>
+<div class="container">
+	<div class="row">
+    	<div class="col-md-7 col-sm-7 col-xs-12">
+        <img src="/images/chk-logo.png" alt="" class="chk-logo">
+        </div>
+        <div class="col-md-5 col-sm-5 col-xs-12">
+   	    	<img src="/images/confirmation-arrow.png" alt="" class="chk-rgt-arrow">
+        </div>
+    </div>
+</div>
+<div class="container incontainer">
+    <div class="row">
+        <div class="col-xs-12">
+       	    <p class="conftxt1">ORDER COMPLETE</p>
+        </div>
+    </div>
+    <div class="row conybbox">
+    	<div class="col-xs-12">
+        	<p class="conybboxtxt">Welcome to <span>Change That Up</span><br class="txtbreak">
+			Be Sure to Read Below…</p>
+        </div>
+    </div>
+    <div class="row">
+    	<div class="contentwrap">
+        	<div class="col-xs-12">
+            	<p class="conftxt2"><span>Congratulations and thank you for your order&#33;</span><br>
+                You made a GREAT decision investing in <span>Transform</span>.<br>
+                Your order is being processed and it will leave our warehouse within 24 hours.</p>
+                <ul class="conflist">
+                	<li>Please print a copy of this page for your records.  An email
+                    confirmation has also been sent to you.  If you don&#39;t receive an email
+                    please check your spam folder and be sure add this email to your contacts
+                    and or safe senders list. </li>
+                    <li>Please note that you will see a charge from <span>&#34;CHANGE THAT UP&#34;</span> on your
+                    credit card or bank statement for this purchase.</li>
+                    <li>If there is an error in your order&#44; please email us at
+                    <a href="mailto:support@changethatup.com">support@changethatup.com</a> right away.</li>
+                </ul>
+                <div class="orderbox">
+                	<p class="orderboxhding"><span class="odboxspantxt">YOUR ORDER</span><br>
+                    <span style="color:#561d92;">Important&#33;</span> Do Not Click Back Button.</p>
+                    <div class="row">
+                    	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                        	<table width="100%" border="0" class="tbltxt">
+                             <tr>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                               <tr class="hidden-sm hidden-md hidden-lg">
+                                <td>Order#: <%= @sale.guid %></td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr class="hidden-xs">
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <!-- <tr>
+                                <td>Billing Info:</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <td>Name:</td>
+                                <td>&nbsp;</td>
+                              </tr> -->
+                              <tr>
+                                <td>Products:</td>
+                                <td><%= @sale.product.name %></td>
+                              </tr>
+                              <tr class="hidden-xs">
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+
+                            </table>
+
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                        <table width="100%" border="0" class="tbltxt">
+                              <tr class="hidden-xs">
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr class="hidden-xs">
+                                <td>Order#: <%= @sale.guid %></td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <td>Shipping Information:</td>
+
+                              </tr>
+                              <tr>
+                                <td><%= @sale.name %></td>
+                              </tr>
+                              <tr>
+                                <td><%= @sale.line1 %></td>
+                              </tr>
+                              <tr>
+                                <td><%= @sale.line2 %></td>
+                              </tr>
+                              <tr>
+                                <td><%= @sale.city %></td>
+                              </tr>
+                              <tr>
+                                <td><%= @sale.region %></td>
+                              </tr>
+                              <tr>
+                                <td><%= @sale.postal_code %></td>
+                              </tr>
+                              <tr>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <!-- <tr>
+                                <td>Price:</td>
+                                <td></td>
+                              </tr> -->
+                              <!-- <tr>
+                                <td>Shipping:</td>
+                                <td>&nbsp;</td>
+                              </tr> -->
+                              <tr>
+                                <td>Total:</td>
+                                <td><%= formatted_price @sale.amount %></td>
+                              </tr>
+                            </table>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+<div class="container">&nbsp;</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+
   </body>
 </html>
