@@ -18,7 +18,7 @@ class TransactionsController < ApplicationController
       line1: params[:line1],
       line2: params[:line2],
       city: params[:city],
-      region: params[:state],
+      region: params[:region],
       postal_code: params[:postal_code],
       country:  'US',
     )
