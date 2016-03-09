@@ -24,6 +24,8 @@ class Sale < ActiveRecord::Base
   belongs_to :product
   before_save :populate_guid
   validates_uniqueness_of :guid
+  validates_presence_of :product_id
+  validates_presence_of :stripe_token
 
   private
   def populate_guid
