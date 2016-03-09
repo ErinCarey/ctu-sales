@@ -1,5 +1,5 @@
 class TransactionsController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:new, :create, :iframe, :status]
+  skip_before_action :authenticate_user!, only: [:new, :create, :iframe, :status, :receipt]
   before_filter :strip_iframe_protection
 
   def create
