@@ -1,2 +1,2 @@
-<%= render :file => "#{RAILS_ROOT}/public/upsell.html" %>
+<%= render :file => "#{Rails.root}/public/upsell.html" %>
 <%= render 'upsell_form', permalink: @product.permalink, sale: @sale, price: formatted_price(@product.price) %>
