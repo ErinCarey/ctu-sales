@@ -7,14 +7,14 @@ class StripeMailer < ActionMailer::Base
     @charge = charge
     @sale = Sale.find_by(stripe_id: @charge.id)
     if @sale
-      mail(to: 'fizz@fastmail.fm', subject: "Dispute created on charge #{@sale.guid} (#{charge.id})").deliver
+      mail(to: 'support@changethatup.com', subject: "Dispute created on charge #{@sale.guid} (#{charge.id})").deliver
     end
   end
 
   def admin_charge_succeeded(charge)
     @charge = charge
     @sale = Sale.find_by(stripe_id: @charge.id)
-    mail(to: 'fizz@fastmail.fm', subject: 'Woo! Charge Succeeded!')
+    mail(to: 'support@changethatup.com', subject: 'Purchase succeeded')
   end
 
   def receipt(charge)
