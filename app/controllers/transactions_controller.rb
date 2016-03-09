@@ -34,6 +34,17 @@ class TransactionsController < ApplicationController
     end
   end
 
+  def accept
+    @upsell = Product.find_by!(
+      permalink: params[:permalink]
+    )
+    @sale = Sale.where(guid: params[:guid]).first
+  end
+
+  def decline
+  end
+
+
   def status
     @sale = Sale.where(guid: params[:guid]).first
     render nothing: true, status: 404 and return unless @sale
@@ -66,7 +77,10 @@ class TransactionsController < ApplicationController
   def upsell
     @product = Product.find_by!(permalink: 'transform-x6')
     @sale = Sale.find_by!(guid: params[:guid])
+  end
 
+  def receipt
+    @sale = Sale.find_by!(guid: params[:guid])
   end
 
   private

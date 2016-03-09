@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/buy/:permalink', to: 'transactions#new', as: :show_buy
   post '/buy/:permalink', to: 'transactions#create', as: :buy
   get '/pickup/:guid', to: 'transactions#pickup', as: :pickup
+  get '/thank-you/:guid', to: 'transactions#receipt', as: :receipt
   get '/stock-up-and-save/:guid', to: 'transactions#upsell', as: :upsell
   get '/download/:guid', to: 'transactions#download', as: :download
   match '/iframe/:permalink' => 'transactions#iframe', via: :get, as: :buy_iframe
