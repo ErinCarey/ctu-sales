@@ -49,6 +49,7 @@ class TransactionsController < ApplicationController
     @product = @sale.product
   end
 
+
   def download
     @sale = Sale.find_by!(guid: params[:guid])
     resp = HTTParty.get(@sale.product.file.url)
@@ -60,6 +61,10 @@ class TransactionsController < ApplicationController
   def iframe
     @product = Product.find_by!(permalink: params[:permalink])
     @sale = Sale.new(product_id: @product)
+  end
+
+  def upsell
+    @sale = Sale.find_by!(guid: params[:guid])
   end
 
   private

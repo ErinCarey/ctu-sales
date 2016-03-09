@@ -122,7 +122,7 @@
       }
       $.get("/status/" + guid, function(data) {
         if (data.status === "finished") {
-          window.location = "/pickup/" + guid;
+          window.top.location.href = "/stock-up-and-save/" + guid;
         } else if (data.status === "errored") {
           showError(data.error)
         } else {
