@@ -35,13 +35,18 @@ class Sale < ActiveRecord::Base
   end
 
   def charge_card
+    save!
     begin
-      save!
+      customer = Stripe::Customer.create(
+        card: self.stripe_token,
+        email: self.email
+      )
+
       charge = Stripe::Charge.create(
         amount: self.amount,
         currency: "usd",
-        source: self.stripe_token,
-        description: self.email,
+        customer: customer.id,
+        description: self.guid,
         shipping: {
           address: {
             line1: self.line1,
